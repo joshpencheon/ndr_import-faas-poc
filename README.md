@@ -16,7 +16,7 @@ $ kubectl port-forward -n openfaas svc/gateway 8080:8080
 The Docker instance was used to provide an ephemeral registry to which OpenFaaS could push function images:
 
 ```
-pi$ docker run -p 8080:8080 127.0.0.1:5000/ruby-demo
+pi$ docker run -d -p 5000:5000 --name registry registry:2
 ```
 
 ## Pushing a new function
